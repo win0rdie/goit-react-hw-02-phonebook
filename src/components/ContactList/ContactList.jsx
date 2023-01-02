@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { ButtonList } from './ContactList.styled';
 
 const ContactList = ({ contacts, onDeleteContact }) => (
   <ul>
@@ -6,7 +7,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
       <li key={id}>
         <p>
           {name}: {number}
-          <button onClick={() => onDeleteContact(id)}>Delete</button>
+          <ButtonList onClick={() => onDeleteContact(id)}>Delete</ButtonList>
         </p>
       </li>
     ))}
